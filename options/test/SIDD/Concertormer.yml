@@ -11,8 +11,8 @@ datasets:
     name: SIDD_val
     type: PairedImageDataset
 
-    dataroot_gt: ~/DATA/Datasets/Denoising/SIDD/val/gt_crops.lmdb
-    dataroot_lq: ~/DATA/Datasets/Denoising/SIDD/val/input_crops.lmdb
+    dataroot_gt: <Path to datasets>/Denoising/SIDD/val/gt_crops.lmdb
+    dataroot_lq: <Path to datasets>/Denoising/SIDD/val/input_crops.lmdb
 
     io_backend:
       type: lmdb

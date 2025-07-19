@@ -8,8 +8,8 @@ datasets:
   train:
     name: SIDD
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/SIDD/train/gt_crops.lmdb
-    dataroot_lq: /work/sychien421/Datasets/SIDD/train/input_crops.lmdb
+    dataroot_gt: <Path to datasets>/SIDD/train/gt_crops.lmdb
+    dataroot_lq: <Path to datasets>/SIDD/train/input_crops.lmdb
 
     filename_tmpl: '{}'
     io_backend:
@@ -29,8 +29,8 @@ datasets:
   val:
     name: SIDD_val
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/SIDD/val/gt_crops.lmdb
-    dataroot_lq: /work/sychien421/Datasets/SIDD/val/input_crops.lmdb
+    dataroot_gt: <Path to datasets>/SIDD/val/gt_crops.lmdb
+    dataroot_lq: <Path to datasets>/SIDD/val/input_crops.lmdb
     io_backend:
       type: lmdb
 

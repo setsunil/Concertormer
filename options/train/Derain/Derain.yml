@@ -8,8 +8,8 @@ datasets:
   train:
     name: derain-train
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Derain/train/Rain13K/target.lmdb
-    dataroot_lq: /work/sychien421/Datasets/Derain/train/Rain13K/input.lmdb
+    dataroot_gt: <Path to datasets>/Derain/train/Rain13K/target.lmdb
+    dataroot_lq: <Path to datasets>/Derain/train/Rain13K/input.lmdb
     filename_tmpl: '{}'
     io_backend:
       type: lmdb
@@ -28,8 +28,8 @@ datasets:
   val:
     name: derain-test
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Derain/test/Rain100L/target
-    dataroot_lq: /work/sychien421/Datasets/Derain/test/Rain100L/input
+    dataroot_gt: <Path to datasets>/Derain/test/Rain100L/target
+    dataroot_lq: <Path to datasets>/Derain/test/Rain100L/input
     io_backend:
       type: disk
 

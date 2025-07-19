@@ -17,8 +17,8 @@ datasets:
     name: reds-val300-test
     type: PairedImageDataset
 
-    dataroot_gt: ~/DATA/Datasets/REDS/val/sharp_300.lmdb
-    dataroot_lq: ~/DATA/Datasets/REDS/val/blur_300.lmdb
+    dataroot_gt: <Path to datasets>/REDS/val/sharp_300.lmdb
+    dataroot_lq: <Path to datasets>/REDS/val/blur_300.lmdb
 
     io_backend:
       type: lmdb

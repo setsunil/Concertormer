@@ -9,8 +9,8 @@ datasets:
   test_J:
     name: RealBlur_R
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Motion_Deblurring/RealBlur/RealBlur_R/target.lmdb
-    dataroot_lq: ~/DATA/Datasets/Motion_Deblurring/RealBlur/RealBlur_R/input.lmdb
+    dataroot_gt: <Path to datasets>/RealBlur/RealBlur_R/target.lmdb
+    dataroot_lq: <Path to datasets>/RealBlur/RealBlur_R/input.lmdb
 
     io_backend:
       type: lmdb

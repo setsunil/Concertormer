@@ -9,8 +9,8 @@ datasets:
   test:
     name: gopro-test
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Motion_Deblurring/GoPro/test/target.lmdb
-    dataroot_lq: ~/DATA/Datasets/Motion_Deblurring/GoPro/test/input.lmdb
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/GoPro/test/target.lmdb
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/GoPro/test/input.lmdb
     io_backend:
       type: lmdb
 

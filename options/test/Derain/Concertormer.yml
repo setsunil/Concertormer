@@ -8,32 +8,32 @@ datasets:
   test_0:
     name: Test100
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Derain/test/Test100/target
-    dataroot_lq: ~/DATA/Datasets/Derain/test/Test100/input
+    dataroot_gt: <Path to datasets>/Derain/test/Test100/target
+    dataroot_lq: <Path to datasets>/Derain/test/Test100/input
     io_backend:
       type: disk
 
   test_1:
     name: Rain100H
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Derain/test/Rain100H/target
-    dataroot_lq: ~/DATA/Datasets/Derain/test/Rain100H/input
+    dataroot_gt: <Path to datasets>/Derain/test/Rain100H/target
+    dataroot_lq: <Path to datasets>/Derain/test/Rain100H/input
     io_backend:
       type: disk
 
   test_2:
     name: Rain100L
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Derain/test/Rain100L/target
-    dataroot_lq: ~/DATA/Datasets/Derain/test/Rain100L/input
+    dataroot_gt: <Path to datasets>/Derain/test/Rain100L/target
+    dataroot_lq: <Path to datasets>/Derain/test/Rain100L/input
     io_backend:
       type: disk
 
   test_3:
     name: Test2800
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Derain/test/Test2800/target
-    dataroot_lq: ~/DATA/Datasets/Derain/test/Test2800/input
+    dataroot_gt: <Path to datasets>/Derain/test/Test2800/target
+    dataroot_lq: <Path to datasets>/Derain/test/Test2800/input
     io_backend:
       type: disk
 

@@ -9,8 +9,8 @@ datasets:
   test:
     name: gopro-test
     type: PairedImageDataset
-    dataroot_gt: ~/DATA/Datasets/Motion_Deblurring/HIDE/test/target
-    dataroot_lq: ~/DATA/Datasets/Motion_Deblurring/HIDE/test/input
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/HIDE/test/target
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/HIDE/test/input
     io_backend:
       type: disk
 

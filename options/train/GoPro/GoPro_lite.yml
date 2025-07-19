@@ -8,8 +8,8 @@ datasets:
   train:
     name: gopro-train
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Motion_Deblurring/GoPro/train/sharp_crops.lmdb
-    dataroot_lq: /work/sychien421/Datasets/Motion_Deblurring/GoPro/train/blur_crops.lmdb
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/GoPro/train/sharp_crops.lmdb
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/GoPro/train/blur_crops.lmdb
 
     filename_tmpl: '{}'
     io_backend:
@@ -34,8 +34,8 @@ datasets:
   val:
     name: gopro-test
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Motion_Deblurring/GoPro/val/target_crops.lmdb
-    dataroot_lq: /work/sychien421/Datasets/Motion_Deblurring/GoPro/val/input_crops.lmdb
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/GoPro/val/target_crops.lmdb
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/GoPro/val/input_crops.lmdb
     io_backend:
       type: lmdb
 

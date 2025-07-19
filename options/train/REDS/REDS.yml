@@ -8,8 +8,8 @@ datasets:
   train:
     name: SIDD
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/REDS/train/train_sharp.lmdb
-    dataroot_lq: /work/sychien421/Datasets/REDS/train/train_blur_jpeg.lmdb
+    dataroot_gt: <Path to datasets>/Datasets/REDS/train/train_sharp.lmdb
+    dataroot_lq: <Path to datasets>/Datasets/REDS/train/train_blur_jpeg.lmdb
 
     filename_tmpl: '{}'
     io_backend:
@@ -34,8 +34,8 @@ datasets:
   val:
     name: SIDD_val
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/REDS/val/target/
-    dataroot_lq: /work/sychien421/Datasets/REDS/val/input/
+    dataroot_gt: <Path to datasets>/Datasets/REDS/val/target/
+    dataroot_lq: <Path to datasets>/Datasets/REDS/val/input/
     io_backend:
       type: disk
 

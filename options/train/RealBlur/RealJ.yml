@@ -8,8 +8,8 @@ datasets:
   train:
     name: realJ-train
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/train/target.lmdb
-    dataroot_lq: /work/sychien421/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/train/input.lmdb
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/RealBlur/RealBlur_J/train/target.lmdb
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/RealBlur/RealBlur_J/train/input.lmdb
 
     filename_tmpl: '{}'
     io_backend:
@@ -29,8 +29,8 @@ datasets:
   val:
     name: realJ-test
     type: PairedImageDataset
-    dataroot_gt: /work/sychien421/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/val/target_crops.lmdb
-    dataroot_lq: /work/sychien421/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/val/input_crops.lmdb
+    dataroot_gt: <Path to datasets>/Motion_Deblurring/RealBlur/RealBlur_J/val/target_crops.lmdb
+    dataroot_lq: <Path to datasets>/Motion_Deblurring/RealBlur/RealBlur_J/val/input_crops.lmdb
     io_backend:
       type: lmdb
 
