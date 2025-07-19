@@ -1,0 +1,56 @@
+name: RealBlurJ
+model_type: ImageRestorationModel
+scale: 1
+num_gpu: 1 # set num_gpu: 0 for cpu mode
+manual_seed: 10
+
+# dataset and data loader settings
+datasets:
+  test_J:
+    name: RealBlur_J
+    type: PairedImageDataset
+    dataroot_gt: ~/DATA/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/target.lmdb
+    dataroot_lq: ~/DATA/Datasets/Motion_Deblurring/RealBlur/RealBlur_J/input.lmdb
+    io_backend:
+      type: lmdb
+
+# network structures
+network_g:
+  type: ConcertormerLocal
+  width: 48
+  ffn_expansion_factor: 2
+  train_size: [1, 3, 256, 256]
+  grid_factor: 1.25
+  enc_blk_nums: [6, 8, 24]
+  middle_blk_num: 2
+  dec_blk_nums: [24, 8, 8]
+  enc_heads: [1, 2, 4]
+  middle_heads: 8
+  dec_heads: [4, 2, 1]
+
+# path
+path:
+  pretrain_network_g: models/RealBlur/RealJ.pth
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  save_img: true
+  grids: false
+
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

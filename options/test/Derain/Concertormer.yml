@@ -1,0 +1,78 @@
+name: Derain
+model_type: ImageRestorationModel
+scale: 1
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test_0:
+    name: Test100
+    type: PairedImageDataset
+    dataroot_gt: ~/DATA/Datasets/Derain/test/Test100/target
+    dataroot_lq: ~/DATA/Datasets/Derain/test/Test100/input
+    io_backend:
+      type: disk
+
+  test_1:
+    name: Rain100H
+    type: PairedImageDataset
+    dataroot_gt: ~/DATA/Datasets/Derain/test/Rain100H/target
+    dataroot_lq: ~/DATA/Datasets/Derain/test/Rain100H/input
+    io_backend:
+      type: disk
+
+  test_2:
+    name: Rain100L
+    type: PairedImageDataset
+    dataroot_gt: ~/DATA/Datasets/Derain/test/Rain100L/target
+    dataroot_lq: ~/DATA/Datasets/Derain/test/Rain100L/input
+    io_backend:
+      type: disk
+
+  test_3:
+    name: Test2800
+    type: PairedImageDataset
+    dataroot_gt: ~/DATA/Datasets/Derain/test/Test2800/target
+    dataroot_lq: ~/DATA/Datasets/Derain/test/Test2800/input
+    io_backend:
+      type: disk
+
+network_g:
+  type: ConcertormerLocal
+  width: 48
+  ffn_expansion_factor: 2
+  train_size: [1, 3, 256, 256]
+  grid_factor: 1.75
+  enc_blk_nums: [6, 8, 24]
+  middle_blk_num: 2
+  dec_blk_nums: [24, 8, 8]
+  enc_heads: [1, 2, 4]
+  middle_heads: 8
+  dec_heads: [4, 2, 1]
+
+# path
+path:
+  pretrain_network_g: models/Derain/derain.pth
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  save_img: true
+  grids: false
+
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
