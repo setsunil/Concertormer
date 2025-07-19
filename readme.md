@@ -121,7 +121,7 @@ Please follow the instructions of [Restormer](https://github.com/swz30/Restormer
 [Google Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
 
 ### Results
-You can also download our results directly.
+You can also download our results directly.  
 [Google Drive](https://drive.google.com/file/d/1iqLNR6yrHnL2g2nux5zHKb90gnuTBHOq/view?usp=drive_link)
 
 ### Citations
