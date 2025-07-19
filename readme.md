@@ -118,7 +118,11 @@ python -m torch.distributed.run --nproc_per_node=1 --master_port=4321 basicsr/te
 Please follow the instructions of [Restormer](https://github.com/swz30/Restormer) and [NAFNet](https://github.com/megvii-research/NAFNet).
 
 ### Pretrained Models
-[Gogole Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
+[Google Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
+
+### Results
+You can also download our results directly.
+[Google Drive](https://drive.google.com/file/d/1iqLNR6yrHnL2g2nux5zHKb90gnuTBHOq/view?usp=drive_link)
 
 ### Citations
 If this paper helps your research or work, please consider citing us.
