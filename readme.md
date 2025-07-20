@@ -20,6 +20,19 @@ python -m torch.distributed.run --nproc_per_node=8 --master_port=4321 basicsr/tr
 python -m torch.distributed.run --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/<dataset>/<model>.yml --launcher pytorch
 ```
 
+* Evaluation
+For RealBlur, please use the python script evaluate_realblur.py
+```
+python evaluate_realblur.py --folder RealBlurR --dataset R
+python evaluate_realblur.py --folder RealBlurJ --dataset J
+```
+
+For deraining, please use the m-file evaluate_derain.m
+```
+matlab -nodesktop -nosplash -r "evaluate_derain('Derain')"
+```
+
+
 ### Pretrained Models
 [Google Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
 
