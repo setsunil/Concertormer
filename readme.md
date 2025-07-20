@@ -6,41 +6,42 @@ The official pytorch implementation of the papers
 #### [**Pin-Hung Kuo**](https://setsunil.github.io/), [Jinshan Pan](https://jspan.github.io/), [Shao-Yi Chien](https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943013&p=3), and [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
 
 
-### Datasets
+## Datasets
 Please follow the instructions of [Restormer](https://github.com/swz30/Restormer) and [NAFNet](https://github.com/megvii-research/NAFNet).
 
-### Usage
-* Train
+## Usage
+### Training
 ```
 python -m torch.distributed.run --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/<dataset>/<model>.yml --launcher pytorch
 ```
 
-* Test
+### Testing
 ```
 python -m torch.distributed.run --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/<dataset>/<model>.yml --launcher pytorch
 ```
 
-* Evaluation  
-For RealBlur, please use the python script evaluate_realblur.py
+### Evaluation
+
+* For RealBlur, please use the python script evaluate_realblur.py
 ```
 python evaluate_realblur.py --folder RealBlurR --dataset R
 python evaluate_realblur.py --folder RealBlurJ --dataset J
 ```
 
-For deraining, please use the m-file evaluate_derain.m
+* For deraining, please use the m-file evaluate_derain.m
 ```
 matlab -nodesktop -nosplash -r "evaluate_derain('Derain')"
 ```
 
 
-### Pretrained Models
+## Pretrained Models
 [Google Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
 
-### Results
+## Results
 You can also download our results directly.  
 [Google Drive](https://drive.google.com/file/d/1iqLNR6yrHnL2g2nux5zHKb90gnuTBHOq/view?usp=drive_link)
 
-### Citations
+## Citations
 If this paper helps your research or work, please consider citing us.
 
 ```
@@ -52,7 +53,7 @@ If this paper helps your research or work, please consider citing us.
 }
 ```
 
-### Contact
+## Contact
 
 If you have any questions, please contact setsunil@gmail.com
 
