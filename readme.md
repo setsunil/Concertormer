@@ -9,6 +9,17 @@ The official pytorch implementation of the papers
 ### Datasets
 Please follow the instructions of [Restormer](https://github.com/swz30/Restormer) and [NAFNet](https://github.com/megvii-research/NAFNet).
 
+### Usage
+* Train
+```
+python -m torch.distributed.run --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/<dataset>/<model>.yml --launcher pytorch
+```
+
+* Test
+```
+python -m torch.distributed.run --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/<dataset>/<model>.yml --launcher pytorch
+```
+
 ### Pretrained Models
 [Google Drive](https://drive.google.com/file/d/1NvbGroZm4vVgvWJtmgW-6Fwd97PiukiL/view?usp=drive_link)
 
