@@ -17,7 +17,7 @@ Anaconda
 ### Installation
 Please install Anaconda first, then execute the following command:
 ```
-git@github.com:setsunil/Concertormer.git
+git clone https://github.com/setsunil/Concertormer.git
 cd Concertormer
 source script.sh
 ```
